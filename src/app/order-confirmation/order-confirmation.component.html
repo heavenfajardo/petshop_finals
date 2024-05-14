@@ -1,0 +1,23 @@
+<div class="confirmation-container">
+    <h2>Order Confirmation</h2>
+    <div>
+        <p><strong>Full Name:</strong> {{ paymentDetails.fullName }}</p>
+        <p><strong>Contact Number:</strong> {{ paymentDetails.contactNumber }}</p>
+        <p><strong>Amount Paid:</strong> ${{ paymentDetails.amount }}</p>
+    </div>
+</div>
+
+<style>
+    .confirmation-container {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+</style>

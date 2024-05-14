@@ -1,0 +1,64 @@
+<div class="payment-container">
+    <h2>Payment via Gcash</h2>
+    <form (ngSubmit)="submitPayment()">
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" [(ngModel)]="fullName" name="fullName" required>
+        </div>
+        <div>
+            <label for="gcashName">Gcash Name:</label>
+            <input type="text" id="gcashName" [(ngModel)]="gcashName" name="gcashName" required>
+        </div>
+        <div>
+            <label for="gcashNumber">Gcash Number:</label>
+            <input type="text" id="gcashNumber" [(ngModel)]="gcashNumber" name="gcashNumber" required>
+        </div>
+        <div>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" [(ngModel)]="amount" name="amount" [value]="getTotalPrice()" readonly>
+        </div>
+        <button type="submit">Pay Now</button>
+    </form>
+</div>
+
+
+<style>
+    .payment-container {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
